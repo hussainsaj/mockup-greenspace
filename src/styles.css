@@ -1,0 +1,151 @@
+:root {
+    --margin: 20px;
+}
+
+body {
+    font-family: 'NHaasG-Regular', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+body div {
+    position: absolute;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    font-size: 24px;
+}
+
+.header-2 {
+    font-size: 18px
+}
+
+.sub {
+    font-size: 14px;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+.logo {
+    top: var(--margin);
+    left: var(--margin);
+}
+
+.cross {
+    top: var(--margin);
+    right: var(--margin);
+}
+
+.content {
+    top: 100px;
+    left: var(--margin);
+    width: 90%;
+}
+
+.video {
+    left: var(--margin);
+    top: 200px;
+    width: 90%;
+}
+
+video {
+    width: 100%;
+}
+
+.contact {
+    left: var(--margin);
+    bottom: var(--margin);
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+    min-width: 100%;
+    margin: 0;
+    padding: 10px 0 0;
+}
+
+@media only screen and (max-width: 960px) {
+    .contact {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    :root {
+        --margin: 40px;
+    }
+
+    body, a, .cross {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .mobile-hide {
+        display: block;
+    }
+
+    .header, .header-2 {
+        font-size: 36px;
+    }
+    
+    .sub {
+        font-size: 24px;
+    }
+
+    .video-overlay, .logo, .cross {
+        z-index: 2;
+    }
+
+    .video {
+        z-index: 1;
+    }
+
+    .content, .contact {
+        z-index: 0;
+    }
+
+    .content {
+        top: 50%;
+        transform: translate(0, -100%);
+        width: 60%;
+    }
+
+    .video {
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+    }
+
+    .video-overlay {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
